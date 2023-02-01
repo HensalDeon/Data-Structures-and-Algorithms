@@ -9,12 +9,14 @@ class LinkedList {
     constructor() {
         this.head = null;
         this.tail = null;
+        //size is not mandatory
         this.size = 0;
     }
+    //list is empty
     isEmpty() {
         return this.size === 0;
     }
-
+    //to insert node at begining
     insertFirst(data) {
         const newNode = new Node(data);
         if (this.isEmpty()) {
@@ -27,7 +29,8 @@ class LinkedList {
         }
         this.size++;
     }
-
+    
+    //to insert node at the end
     insertEnd(data) {
         if (this.head == null && this.tail == null) {
             this.head = this.tail;
@@ -40,7 +43,7 @@ class LinkedList {
         }
         this.size++;
     }
-    //insert at index
+    //insert at an index
     insertIndex(data, index) {
         if (index < 0 || index > this.size) {
             return;
@@ -141,7 +144,7 @@ class LinkedList {
             return this.head;
         }
     }
-
+    //to print the values in the linkedlist
     display() {
         if (this.isEmpty()) {
             console.log("list is empty");
@@ -170,6 +173,7 @@ class LinkedList {
             console.log(`null <---> ${str} null`);
         }
     }
+    //to get the size
     getSize() {
         return console.log(this.size);
     }

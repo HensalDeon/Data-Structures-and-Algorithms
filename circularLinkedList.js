@@ -8,15 +8,21 @@ class LinkedList {
     constructor() {
         this.head = null;
         this.tail = null;
+        //size is not mandatory
         this.size = 0;
     }
-
+    
+    //list is empty
     isEmpty() {
         return this.size === 0;
     }
+    
+    //to get the size
     getSize() {
         return this.size;
     }
+    
+    //to insert the value to node
     insert(data) {
         const newNode = new Node(data);
         if (this.isEmpty()) {
@@ -31,7 +37,8 @@ class LinkedList {
             this.size++;
         }
     }
-
+    
+    //to remove data from the node
     removeData(data) {
         if (this.isEmpty()) {
             console.log("list is empty");
@@ -59,7 +66,7 @@ class LinkedList {
         console.log("data not found");
     }
     
-
+    //to print the output
     display() {
         if (this.isEmpty()) {
             console.log("list is empty");
