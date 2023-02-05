@@ -9,7 +9,8 @@ class HashTable {
         for (let i = 0; i < key.length; i++) {
             hash += key.charCodeAt(i);
         }
-        return hash % this.size; //to make sure that the size in range
+        //to make sure that the size in range
+        return hash % this.size; 
     }
 
     set(key, value) {
