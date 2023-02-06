@@ -4,6 +4,7 @@ class HashTable {
         this.size = size;
     }
 
+    //to create an unique code/index number
     hash(key) {
         let hash = 0;
         for (let i = 0; i < key.length; i++) {
@@ -13,6 +14,7 @@ class HashTable {
         return hash % this.size; 
     }
 
+    //to set a key value pair/update the key value
     set(key, value) {
         const index = this.hash(key);
         if (!this.tableArray[index]) {
@@ -28,6 +30,7 @@ class HashTable {
         }
     }
 
+    //to get the value from the key value pair
     get(key) {
         const index = this.hash(key);
         const bucket = this.tableArray[index]
@@ -40,6 +43,7 @@ class HashTable {
         return undefined
     }
 
+    //to remove a key value pair
     remove(key) {
         const index = this.hash(key);
         const bucket = this.tableArray[index]
@@ -51,6 +55,7 @@ class HashTable {
         }
     }
 
+    //to display the key value pair
     display() {
         for (let i = 0; i < this.tableArray.length; i++) {
             if (this.tableArray[i]) {
