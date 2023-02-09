@@ -227,6 +227,45 @@ class LinkedList {
         return total;
     }
 
+    //to find the largest
+    largest() {
+        let current = this.head;
+        let largest = current.data;
+        while (current !== null) {
+            if (largest < current.data) {
+                largest = current.data;
+            }
+            current = current.next;
+        }
+        console.log(largest);
+    }
+    //to sort linked list
+    sort() {
+        let swapped;
+        do {
+            swapped = false;
+            let current = this.head;
+            while (current && current.next) {
+                if (current.data > current.next.data) {
+                    [[current.data], [current.next.data]] = [[current.next.data], [current.data]];
+                    swapped = true;
+                }
+                current = current.next;
+            }
+        } while (swapped === true);
+        return this.head;
+    }
+    //to find the middle node data
+    findMiddle(){
+        let slowPointer = this.head;
+        let fastPointer = this.head;
+        while(fastPointer){
+            slowPointer = slowPointer.next;
+            fastPointer = fastPointer.next.next;
+        }
+        return slowPointer.data;
+    }
+
     display() {
         let string = "";
         let temp = this.head;
@@ -252,7 +291,11 @@ const ls = new LinkedList();
 ls.insertFirst(1);
 ls.insertFirst(2);
 ls.insertFirst(3);
-ls.insertEnd(4);
+ls.insertFirst(4);
+ls.insertFirst(5);
+ls.insertFirst(6);
+
+ls.insertEnd(50);
 ls.insertEnd(20);
 ls.insertIndex(9, 1);
 ls.removeData(20);
@@ -264,6 +307,12 @@ ls.searchData(20);
 //ls.removeAt(0);
 //ls.clearList();
 // ls.reverse();
-//console.log(ls.binaryToDecimal());
+// console.log(ls.binaryToDecimal());
 ls.display();
 ls.displaySize();
+console.log("largest");
+ls.largest();
+
+ls.sort();
+ls.display();
+console.log(ls.findMiddle());
