@@ -237,7 +237,7 @@ class LinkedList {
             }
             current = current.next;
         }
-        console.log(largest);
+        return largest
     }
     //to sort linked list
     sort() {
@@ -310,8 +310,7 @@ ls.searchData(20);
 // console.log(ls.binaryToDecimal());
 ls.display();
 ls.displaySize();
-console.log("largest");
-ls.largest();
+console.log(`largest : ${ls.largest()}`);
 
 ls.sort();
 ls.display();
