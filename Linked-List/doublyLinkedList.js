@@ -94,6 +94,7 @@ class LinkedList {
                     previous.next = newNode;
                     newNode.prev = previous;
                     current.prev = newNode;
+
                     this.size++;
                 }
 
@@ -189,5 +190,5 @@ ls.insertIndex(4, 2);
 ls.insertAfterData(10, 5);
 ls.insertBeforeData(1, 7);
 ls.display();
-ls.printReverse();
+// ls.printReverse();
 ls.getSize();
