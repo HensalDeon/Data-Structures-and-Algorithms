@@ -14,7 +14,7 @@ class Graph {
             this.addVertex(vertex1);
         }
         if (!this.adjacencyList[vertex2]) {
-            this.adjacencyList(vertex2);
+            this.addVertex(vertex2);
         }
 
         this.adjacencyList[vertex1].add(vertex2);

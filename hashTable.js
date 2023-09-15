@@ -73,5 +73,6 @@ table.display();
 console.log(table.get("name"));
 table.set("mane", "deon");
 table.remove('name')
-
+table.set("age", 24);
+table.set("aeg", 26);
 table.display();

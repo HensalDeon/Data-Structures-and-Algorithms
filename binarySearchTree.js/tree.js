@@ -14,7 +14,8 @@ class binarySearchTree {
     isEmpty() {
         return this.root === null;
     }
-    //to insert a value/Node
+
+    //to insert a value/Node    
     insert(value) {
         const newNode = new Node(value);
         if (this.isEmpty()) {
@@ -23,6 +24,7 @@ class binarySearchTree {
             this.insertNode(this.root, newNode);
         }
     }
+
     insertNode(root, newNode) {
         if (newNode.value < root.value) {
             if (root.left === null) {
@@ -78,6 +80,7 @@ class binarySearchTree {
             console.log(root.value);
         }
     }
+
     // BFS traversal
     levelOrder() {
         //use the optimised queue implemention
@@ -121,8 +124,10 @@ class binarySearchTree {
         }
         if (value < root.value) {
             root.left = this.deleteNode(root.left, value);
+            console.log(root.left,'❤️');
         } else if (value > root.value) {
             root.right = this.deleteNode(root.right, value);
+            console.log(root.right,'❤️❤️❤️');
         } else {
             if (!root.left && !root.right) {
                 return null;
@@ -133,7 +138,9 @@ class binarySearchTree {
                 return root.left;
             }
             root.value = this.min(root.right);
+            console.log( root.value,'🥰🥰');
             root.right = this.deleteNode(root.right, root.value);
+            console.log(root.right,'😏😏');
         }
         return root;
     }
@@ -188,7 +195,6 @@ const bst = new binarySearchTree();
 // bst.root.left = new Node(10);
 // bst.root.right = new Node(30);
 // bst.root.left.left = new Node(8);
-// console.log(bst.isValidBST(bst.root, -Infinity, Infinity));
 
 bst.insert(50);
 bst.insert(40);
@@ -202,7 +208,7 @@ console.log(bst.search(bst.root, 1));
 console.log(bst.search(bst.root, 30));
 console.log(bst.search(bst.root, 40));
 
-bst.delete(45);
+// bst.delete(45);
 
 console.log("preOrder traversal");
 bst.preOrder(bst.root);
@@ -214,9 +220,15 @@ console.log("postOrder traversal");
 bst.postOrder(bst.root);
 
 console.log("bfs traversal");
+bst.deleteNode(bst.root,40)
 bst.levelOrder();
 
 console.log(`minimum value : ${bst.min(bst.root)}`);
 console.log(`maximum value : ${bst.max(bst.root)}`);
 
 console.log(`closest value: ${bst.findClosestValue(bst.root, 49)}`);
+
+// console.log(bst.isValidBST(bst.root, -Infinity, Infinity));
+
+                  
+

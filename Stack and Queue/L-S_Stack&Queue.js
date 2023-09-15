@@ -4,6 +4,7 @@ class Node {
         this.next = null;
     }
 }
+
 class LinkedList {
     constructor() {
         this.head = null;
@@ -57,6 +58,7 @@ class LinkedList {
             console.log(`${str} null`);
         }
     }
+    
     push(data) {
         const newNode = new Node(data);
         if (this.isEmpty()) {

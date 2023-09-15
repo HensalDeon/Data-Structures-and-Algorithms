@@ -102,7 +102,7 @@ heap.insert(50);
 heap.insert(35);
 heap.insert(46);
 heap.insert(10);
-console.log(heap.remove());
+// console.log(heap.remove());
 console.log(heap.heap);
 
 const array = [4, 6, 3, 5, 8, 10];
