@@ -1,3 +1,5 @@
+const array = [8, 20, -2, 4, -6];
+
 //selection sort
 function selectionSort(array) {
     for (let i = 0; i < array.length - 1; i++) {
@@ -9,7 +11,7 @@ function selectionSort(array) {
             }
         }
     }
-    return array
+    return array;
 }
 console.log(selectionSort(array));
 

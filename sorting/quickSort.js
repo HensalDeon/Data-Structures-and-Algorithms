@@ -6,7 +6,7 @@ function quickSort(array) {
     let pivot = array[array.length - 1];
     let leftArr = [];
     let rightArr = [];
-    for (i = 0; i < array.length - 1; i++) {
+    for (let i = 0; i < array.length - 1; i++) {
         if (array[i] < pivot) {
             leftArr.push(array[i]);
         } else {

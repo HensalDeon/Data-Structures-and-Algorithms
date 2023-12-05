@@ -135,6 +135,7 @@ class LinkedList {
         }
         return;
     }
+    
     //to remove at an index
     removeAt(index) {
         if (index < 0 || index > this.size) {
@@ -153,6 +154,7 @@ class LinkedList {
                     count++;
                 }
                 previous.next = current.next;
+                // current.next = current.next.next;
             }
         }
         this.size--;
@@ -304,7 +306,7 @@ ls.insertBeforeData(4, 23);
 ls.getAt(0);
 ls.searchData(20);
 //ls.removeDuplicates();
-//ls.removeAt(0);
+// ls.removeAt(0);
 //ls.clearList();
 // ls.reverse();
 // console.log(ls.binaryToDecimal());
@@ -314,4 +316,4 @@ console.log(`largest : ${ls.largest()}`);
 
 ls.sort();
 ls.display();
-console.log(ls.findMiddle());
+// console.log(ls.findMiddle());

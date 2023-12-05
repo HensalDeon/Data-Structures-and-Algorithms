@@ -66,13 +66,13 @@ class HashTable {
 }
 const table = new HashTable(50);
 
-table.set("name", "Hensal");
-table.set("age", 23);
-table.display();
+// table.set("name", "Hensal");
+// table.set("age", 23);
+// table.display();
 
-console.log(table.get("name"));
-table.set("mane", "deon");
-table.remove('name')
+// console.log(table.get("name"));
+// table.set("mane", "deon");
+// table.remove('name')
 table.set("age", 24);
 table.set("aeg", 26);
 table.display();
